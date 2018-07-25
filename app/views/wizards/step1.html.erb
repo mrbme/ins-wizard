@@ -1,14 +1,16 @@
 <div class="container">
-  <div class="row">
+  <div class="row align-items-center">
     <div class="col-md"6>
       <h1>
         The easy way to compare and buy life insurance
       </h1>
       <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+      <div class="form-group">
         <%= f.error_notification %>
         <%= hidden_field_tag :current_step, 'step1' %>
-        <%= f.input :zip_code %>
-        <%= f.submit 'Continue' %>
+        <%= f.input :zip_code, class: "form-control" %>
+        <%= f.submit 'Continue', class: 'btn btn-primary btn-block' %>
+      </div>
     <% end %>
     </div>
 <div class="col-md-6">

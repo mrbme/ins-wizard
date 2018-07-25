@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     post :validate_step
   end
 
-  root 'home#index'
-  #root 'wizards#index'
+  #root 'home#index'
+  root 'wizards#step1'
   
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
