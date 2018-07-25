@@ -1,4 +1,4 @@
 class ApplicationRecord < ActiveRecord::Base
-    include HTTParty
+    #include HTTParty
   self.abstract_class = true
 end

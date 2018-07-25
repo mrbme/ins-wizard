@@ -1,15 +1,20 @@
-<ol class="breadcrumb">
-  <li class='active'>Step 1</li>
-  <li>Step 2</li>
-  <li>Step 3</li>
-  <li>Step 4</li>
-</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-md"6>
+      <h1>
+        The easy way to compare and buy life insurance
+      </h1>
+      <%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+        <%= f.error_notification %>
+        <%= hidden_field_tag :current_step, 'step1' %>
+        <%= f.input :zip_code %>
+        <%= f.submit 'Continue' %>
+    <% end %>
+    </div>
+<div class="col-md-6">
+  <img src="https://policygenius-images.imgix.net/photos/home/mother-holding-yawning-baby.jpg?fit=max&auto=format&ch=Width,DPR&w=720">
+    </div>  
+</div>
+</div>
 
-<%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
-  <%= f.error_notification %>
 
-  <%= hidden_field_tag :current_step, 'step1' %>
-  <%= f.input :email %>
-
-  <%= f.submit 'Continue' %>
-<% end %>
