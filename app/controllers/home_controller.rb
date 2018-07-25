@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
- 
-  def index
-    @address = Address.get('http://ip-api.com/json')
+   def index
+     response = HTTParty.get('http://ip-api.com/json')
+     obj = JSON.parse(response.body)
+     @region = obj["region"]
   end
-
 end
 
